@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MUKUND calculator</title>
+        <style>
+            body{
+                background-color: cyan;
+            }
+        #sm{
+            text-align: center;
+            background-color: rgb(115, 218, 120);
+            }
+            h1{ text-align: center;
+                background-color: chartreuse;
+            }
+            h1:hover{
+                cursor: all-scroll;
+                background-color: crimson;
+            }
+        </style>
+        
+    </head>
+    <body><h1>Welcome to the Math World</h1>
+        <form onsubmit="return f()">
+        <p> First number</p>
+        <input type="number" placeholder="Enter First number" id="first">
+        <br>
+        <p> Second number</p>
+        <input type="number" placeholder="Enter Second number" id="second">
+        <br>
+        <br>
+        <tr>
+            <td>SELECT YOUR OPERATION</td>
+            <td>
+        <select id="sel">
+            <option>ADD</option>
+            <option>SUB</option>
+            <option>MUL</option>
+            <option>DIV</option>
+        </select>
+         </td>
+        </tr>
+        <br>
+        <input type="submit" value="Submit" id="sm">
+        
+    </form>
+    <div id="result"></div>
+    <script>
+        function f(){
+        var c=parseInt(document.getElementById("first").value);
+        var d=parseInt(document.getElementById("second").value);
+        var f=document.getElementById("sel").value;
+        if(f=="ADD"){
+        var e=c+d;
+        document.getElementById("result").innerHTML= "The value is "+ e;
+        }
+        else if(f=="SUB"){
+        var e=c-d;
+        document.getElementById("result").innerHTML= "The value is "+ e;
+        }
+        else if(f=="MUL"){
+        var e=c*d;
+        document.getElementById("result").innerHTML= "The value is "+ e;
+        }
+        else if(f=="DIV"){
+            
+        var e=c/d;
+        var g=c%d;
+        document.getElementById("result").innerHTML= "The value is "+ e;
+        }
+        return false;
+        }
+    </script>
+    </body>
+
+</html>
